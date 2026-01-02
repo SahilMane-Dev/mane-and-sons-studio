@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mane & Sons</title>
+    <link rel="icon" href="../static/images/title/barbershop.png">
+    <style>
+        /* ===== Body ===== */
+        body {
+            background-color: #121212;
+            /* same as homepage */
+            color: #f1f1f1;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== Header ===== */
+        header {
+            background-color: #1f1f1f;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ffb800;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #ffb800;
+            margin: 0;
+        }
+
+        header #link {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        header #link a {
+            color: #f1f1f1;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            outline: none;
+        }
+
+        header #link a:hover,
+        header #link a:focus {
+            color: #ffb800;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background-color: #1f1f1f;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 2px solid #ffb800;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        /* ===== Main Section ===== */
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 15px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        form input::placeholder,
+        form textarea::placeholder {
+            color: #ccc;
+        }
+
+        form button {
+            background-color: #ffb800;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #e0a800;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        #mail {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #mail:hover {
+            color: #ffcc00;
+            text-shadow: 0px 0px 2px white;
+        }
+
+        /* ===== Responsive ===== */
+        @media(max-width:600px) {
+            header h1 {
+                font-size: 20px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            header #link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            header #link a {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MANE & SONS HAIRCUT STUDIO</h1>
+        <div id="link">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/service">Services</a>
+            <a href="/customer">Customer form</a>
+            <a href="/contact">Contact us</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>Contact Us</h2>
+
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="4e22d5b8-2181-4678-86b7-2b96e6a6ff50">
+                <!-- <input type="hidden" name="redirect" value="http://localhost:5000/contact_success"> -->
+
+
+
+
+
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <p>📧 Email: <a id="mail" href="mailto:psyhilmane@gmail.com">psyhilmane@gmail.com</a></p>
+                <p>📍 Location: Mumbai - 400080 | Maharashtra | India</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>@2025 Mane & Sons Haircut Studio. All rights reserved.</small>
+    </footer>
+
+</body>
+
+</html>

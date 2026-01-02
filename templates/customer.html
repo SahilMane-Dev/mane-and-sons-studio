@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer form</title>
+<link rel="icon" href="../static/images/title/barbershop.png">
+
+<style>
+
+header {
+    background-color: #1f1f1f;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffb800;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #ffb800;
+    margin: 0;
+}
+
+header #link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header #link a {
+    color: #f1f1f1;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    outline: none;
+}
+
+header #link a:hover,
+header #link a:focus {
+    color: #ffb800;
+}
+
+
+footer {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 2px solid #ffb800;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    padding: 40px 20px;
+}
+
+.error-container {
+    height: 50px; /* enough for 2-3 errors */
+    margin-bottom: 15px;
+}
+
+.error-list {
+    list-style: none;
+    padding-left: 20px;
+    color: red;
+    font-size: 0.9rem;
+    margin: 0;
+}
+.customer-note {
+    background-color: #1f1f1f;
+    color: #ffb800;
+    padding: 10px 15px;
+    border-left: 4px solid #ffb800;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    text-align: left;
+    margin: 0px 15px;
+}
+/* fieldset {
+    width: 100%;
+    max-width: 500px;
+} */
+
+
+
+
+</style>
+</head>
+
+<body>
+<header>
+    <h1>MANE & SONS HAIRCUT STUDIO</h1>
+    <div id="link">
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/service">Services</a>
+        <a href="/customer">Customer form</a>
+        <a href="/contact">Contact us</a>
+    </div>
+</header>
+
+<main>
+    <section id="customer" style="text-align: center;">
+        <center>
+
+           
+            <div class="error-container">
+                {% if errors %}
+                    <ul class="error-list">
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <!-- Reserve space so form doesn't jump -->
+                    <ul class="error-list" style="visibility:hidden;">
+                        <li>placeholder</li>
+                    </ul>
+                {% endif %}
+            </div>
+            
+            
+          <form action="/customer" style="margin-top: 20px;" method="POST">
+         
+              
+          
+            <h2>Book Your Haircut Appointment</h2>
+            <fieldset id="fieldset" style="width: fit-content; border-color:#ffb800 ;">
+                <legend style="text-shadow: 1px 1px 3px white; font-size: 22px;"><strong>Appointment Details</strong></legend>
+
+                <label class="label" for="">Enter your Name:-</label>
+                <input type="text" class="textbox" name="name" placeholder="full-name" required minlength="3"> <br><br>
+
+                <label class="label" for="">Enter phone number:-</label>
+                <input type="number" class="textbox" required name="phone" pattern="[0-9]{10}"> <br><br>
+
+                <label class="label" for="" id="select">Select your service :- </label> <br>
+                <div id="radio" style="font-size: bolder;">
+                    <input type="radio" name="service" value="Haircut" > <label for="">Haircut</label> 
+                    <input type="radio" name="service" value="Beard Trim"><label for="">Beard Trim</label> 
+                    <input type="radio" name="service" value="Hair wash"><label for="">Hair wash</label> 
+                    <input type="radio" name="service" value="Full Grooming"><label for="">Full Grooming</label> 
+                    <input type="radio" name="service" value="Kids Cut"><label for="">Kids Cut</label> <br><br>
+                </div>
+
+                <label class="label" for="">Any Special Instructions:-</label> <br>
+                <textarea name="instructions" id="instructions" style="width: 300px;" placeholder="Any specific style or request? Let us know here.." maxlength="100"></textarea> <br><br>
+
+                <label class="label" for="">Please Select the date:-</label>
+                <input type="date" name="date" id=""> <br><br>
+
+                <label class="label" for="">Select The Time-Slot:-</label>
+                <select name="time" id="time" required>
+                    <option value="">Select here!</option>
+                    <option name="Morning" value="Morning">Morning</option>
+                    <option name="Afternoon" value="Afternoon">Afternoon</option>
+                    <option name="Evening" value="Evening">Evening</option>
+                </select>
+                <br><br>
+
+                <button id="button">Confirm Appointment</button>
+            </fieldset>
+
+            <p class="customer-note" style="margin-top: 30px;">
+                Thank you for choosing Us! Once you submit this form, your appointment request will be sent to our studio. 
+                We’ll contact you shortly to confirm your preferred slot. 
+                Get ready for a fresh new look! 
+            </p>
+          </form>
+
+        </center>
+    </section>
+ 
+</main>
+
+
+
+
+
+
+<footer>
+    <small>@2025 Mane & Sons Haircut Studio. All rights reserved.</small>
+</footer>
+</body>
+</html>

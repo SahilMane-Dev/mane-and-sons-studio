@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mane & Sons Haircut Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../static/images/title/barbershop.png">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark theme */
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffb800;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #ffb800;
+    margin: 0;
+}
+
+header #link a {
+    color: #f1f1f1;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    outline:none;
+}
+
+header #link a:hover {
+    color: #ffb800;
+}
+
+main {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ffb800;
+}
+
+main p.content {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+main img#img {
+    width: 300px;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ffb800;
+    margin-bottom: 25px;
+    transition: transform 0.3s;
+}
+
+main img#img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 2px solid #ffb800;
+    font-size: 14px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    header #link {
+        width: 100%;
+        text-align: center;
+    }
+    header #link a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+}
+
+ 
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <h1>MANE & SONS HAIRCUT STUDIO</h1>
+    <div id="link">
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/service">Services</a>
+        <a href="/customer">Customer form</a>
+        <a href="/contact">Contact us</a>
+    </div>
+</header>
+
+<main>
+    <h2>Hello, Welcome to Mane & Sons Haircut Studio</h2>
+    <p class="content">Look Sharp, Feel Confident, Walk out like a Boss!</p>
+
+    <img id="img" src="../static/images/Background/hero.png" alt="hair studio" style="width: 40%;">
+
+    <p class="content">
+        At Our Hair Studio, we believe in giving you the perfect look that matches your style and personality.<br>
+        With expert barbers and a friendly vibe, we’re your one-stop destination for transformation.
+    </p>
+</main>
+
+<footer id="footer">
+    <small>@2025 Mane & Sons Haircut Studio. All rights reserved.</small>
+</footer>
+
+</body>
+</html>
