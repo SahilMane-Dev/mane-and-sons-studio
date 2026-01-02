@@ -1,3 +1,6 @@
+[![Live Site](https://img.shields.io/badge/Live-Demo-brightgreen)](https://mane-and-sons-studio.onrender.com)
+
+
 # Mane and Sons Studio 💈
 
 Mane and Sons Studio is a Flask-based web application built as part of my
