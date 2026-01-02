@@ -1,7 +1,10 @@
-__pycache__/
+
 venv/
 .env
 instance/
 *.pyc
 *.db
-*.__pycache__
+
+__pycache__/
+*.pyc
+
